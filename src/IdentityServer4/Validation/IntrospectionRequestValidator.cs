@@ -79,7 +79,8 @@ namespace IdentityServer4.Validation
                 IsError = false,
                 Token = token,
                 Claims = tokenValidationResult.Claims,
-                Api = api
+                Api = api,
+                Parameters = parameters
             };
         }
     }

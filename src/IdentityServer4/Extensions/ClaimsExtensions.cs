@@ -11,8 +11,16 @@ using System.Security.Claims;
 
 namespace IdentityServer4.Extensions
 {
-    internal static class ClaimsExtensions
+    /// <summary>
+    /// <see cref="Claim"/> extensions
+    /// </summary>
+    public static class ClaimsExtensions
     {
+        /// <summary>
+        /// Converts a list of <see cref="Claim"/> to a <see cref="Dictionary{TKey, TValue}"/>
+        /// </summary>
+        /// <param name="claims"></param>
+        /// <returns></returns>
         public static Dictionary<string, object> ToClaimsDictionary(this IEnumerable<Claim> claims)
         {
             var d = new Dictionary<string, object>();
